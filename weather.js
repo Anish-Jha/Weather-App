@@ -34,6 +34,6 @@ function subMit() {
 document.getElementById("Btn").addEventListener("click", subMit);
 
 window.addEventListener("load", () => {
-    document.getElementById("citY").value = 'delhi';
+    document.getElementById("citY").value = '';
     subMit(); 
 });
