@@ -1,41 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="weather.css" />
-  </head>
-  <body>
-    <div id="bat">
-      <div class="basic_info_">
-        <div id="inFo">
-          <h1 id="head">How's the weather today?</h1>
-          <input type="text" id="citY" placeholder="CityName" />
-          <button id="Btn" onclick="subMit()">Enter</button>
-          <h1 id="fir"></h1>
-          <h3 id="sec"></h3>
-          <h3 id="thi"></h3>
-          <h3 id="for"></h3>
-          <h3 id="six"></h3>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <title>WeatherTron 3000</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <canvas id="retroCanvas"></canvas>
+  <div class="overlay"></div>
+  <div class="container">
+    <header>
+      <h1 class="title">WeatherTron 3000</h1>
+    </header>
+    <main>
+      <div class="input-container">
+        <input type="text" id="citY" placeholder="ENTER CITY //> " />
+        <button id="Btn" onclick="subMit()">SCAN</button>
       </div>
-      <div class="mapouter">
-        <div class="gmap_canvas">
-          <iframe id="gmap_canvas"></iframe>
-          <!-- <a style="border: 1px solid black;" href="https://www.embedgooglemap.net"></a> -->
-        </div>
+      <div class="weather-info" id="inFo">
+        <h2 id="fir" class="hidden"></h2>
+        <p id="sec" class="hidden"></p>
+        <p id="thi" class="hidden"></p>
+        <p id="for" class="hidden"></p>
+        <p id="six" class="hidden"></p>
       </div>
-    </div>
-  </body>
+      <div class="map-container">
+        <iframe id="gmap_canvas" class="hidden"></iframe>
+      </div>
+    </main>
+  </div>
   <script src="weather.js"></script>
-  <!-- <script src="particles.js-master/particles.js"></script>
-  <script src="/particles.js-master/demo/js/app.js"></script> -->
+</body>
 </html>
